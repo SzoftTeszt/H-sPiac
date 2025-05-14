@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { KeresesService } from '../kereses.service';
 
 @Component({
   selector: 'app-navbar',
@@ -13,4 +14,12 @@ export class NavbarComponent {
     {text:"Kijelentkezés", route:"logout"},
   ]
 
+  szo=""
+
+  constructor(private kereses:KeresesService){}
+
+  ujSzo(){
+    console.log("Változás")
+    this.kereses.szoSubject.next(this.szo)
+  }
 }

@@ -1,5 +1,7 @@
+ <input type="text" [(ngModel)]="szo" class="form-control">
+
 <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
-  <div *ngFor="let product of products" class="col">
+  <div *ngFor=" let product of products|search:szo " class="col">
 
     <div class="card h-100">
       <img [src]="product.kep" class="card-img-top" alt="...">
