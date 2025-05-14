@@ -1,0 +1,31 @@
+<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+  <div *ngFor="let product of products" class="col">
+
+    <div class="card h-100">
+      <img [src]="product.kep" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{product.leiras}}</h5>
+        <p class="card-text">{{product.leiras}}</p>
+        <p> {{product.ar}} Ft/{{product.mennyiseg}}</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">
+            <div class="row text-center">               
+                <div class="col-6">
+                    <input type="number" class="form-control">
+                </div>
+               <div class="col-6">
+                    <button type="button" class="btn btn-outline-primary btn-sm mt-1">Add</button>
+                </div>    
+            </div>
+        </small>
+      </div>
+    </div>
+
+  </div>
+  
+</div>
+
+
+
+{{products|json}}
